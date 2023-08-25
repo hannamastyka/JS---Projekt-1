@@ -1,0 +1,14 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: palevioletred;
+}
+
+text {
+  color: #3498db;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

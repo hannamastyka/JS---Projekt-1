@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <form action="">
-    <label>Wynagrodzenie: <intup /></label>
-    <br />
-    <label>pensja Startowa: <intup /></label>
-    <br />
-    <label>okres Pracy: <intup /></label>
-    <br />
-    <button type="submit">Oblicz</button>
-</form>
-</html>
-<script src=".index.js"></script>
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Wydatki w budżecie domowym w danym miesiącu</h1>
+      </header>
+      <p class="text">Możesz jeszcze wydać XXX złotych.</p>
+    </div>
+    <form id="incomes-form">
+      <input type="text" name="income-title" />
+      <input type="number" name="income-amount" />
+      <button type="submit">Dodaj przychód</button>
+      <input type="text" name="income-title" />
+      <input type="number" name="income-amount" />
+      <button type="submit">Dodaj wydatek</button>
+    </form>
+  </body>
 </html>
