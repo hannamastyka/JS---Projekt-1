@@ -3,12 +3,13 @@
   margin: 0 auto;
   padding: 20px;
   background-color: palevioletred;
+  justify-content: center;
 }
 
-text {
-  color: #3498db;
+.text {
+  color: black;
   padding: 10px;
-  position: absolute;
-  bottom: 0;
+  margin: 0 auto;
   width: 100%;
+  justify-content: center;
 }

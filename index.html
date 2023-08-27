@@ -3,22 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Wydatki w budżecie domowym w danym miesiącu</h1>
+        <h1>Wydatki w budżecie domowym w ciągu jedniego miesiąca</h1>
       </header>
-      <p class="text">Możesz jeszcze wydać XXX złotych.</p>
+      <p class="text">Możesz jeszcze wydać *** złotych.</p>
     </div>
     <form id="incomes-form">
-      <input type="text" name="income-title" />
-      <input type="number" name="income-amount" />
+      <input type="text" name="income-title" minlength="3" />
+      <input type="number" name="incomeAmount" />
       <button type="submit">Dodaj przychód</button>
-      <input type="text" name="income-title" />
-      <input type="number" name="income-amount" />
+    </form>
+    <ul id="incomes-list"></ul>
+    <div id="total-incomes"></div>
+    <form id="expenses-form">
+      <input type="text" name="expenses-title" minlength="3" />
+      <input type="number" name="expenses-amount" />
       <button type="submit">Dodaj wydatek</button>
+      <ul id="expenses-list"></ul>
+      <div id="total-expenses"></div>
     </form>
   </body>
 </html>
