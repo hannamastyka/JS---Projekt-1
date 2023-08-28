@@ -35,3 +35,18 @@ incomesForm.addEventListener("submit", (event) => {
 
   renderIncomesList();
 });
+function updateBalanceUI(balance) {
+  if (balance > 0) {
+    balanceElement.textContent = `Możesz jeszcze wydać ${balance.toFixed(
+      2
+    )} złotych`;
+  } else if (balance === 0) {
+    balanceElement.textContent = "Bilans wynosi zero";
+  } else {
+    balanceElement.textContent = `Bilans jest ujemny. Jesteś na minusie ${Math.abs(
+      balance
+    ).toFixed(2)} złotych`;
+  }
+}
+
+updateUI();
