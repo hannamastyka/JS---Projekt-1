@@ -27,3 +27,71 @@ h1 {
   border-bottom: 1px solid #ccc;
   padding: 5px 0;
 }
+
+/* Resetowanie domyślnych stylów przeglądarki */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styl kontenera */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Nagłówek */
+header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Tekst na stronie */
+.text {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+/* Formularze */
+form {
+  margin: 20px 0;
+}
+
+/* Pola formularza */
+input[type="text"],
+input[type="number"],
+button {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Przyciski formularza */
+button {
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Listy przychodów i wydatków */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Pozostałe elementy */
+#total-incomes,
+#total-expenses {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#description,
+#amount {
+  margin: 5px;
+}
