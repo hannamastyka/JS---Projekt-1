@@ -38,11 +38,21 @@ function renderIncomesList() {
   incomes.forEach((income) => {
     const item = document.createElement("li");
     item.textContent = `${income.title}: ${income.amount} zł`;
-    // dodac buttony
+    const editButton = document.createElement("button");
+    editButton.textContent = "edytuj";
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "usuń";
     incomesList.appendChild(item);
+    item.appendChild(deleteButton);
+    item.appendChild(editButton);
+    deleteButton.addEventListener("click", () => {
+      const index = incomes.findIndex((item) => item.id === income.id);
+      incomes.splice(index, 1);
+      calculateTotalIncomes();
+      updateBalanceUI();
+      renderIncomesList();
+    }); 
   });
-  calculateTotalIncomes();
-  updateBalanceUI();
 }
 
 incomesForm.addEventListener("submit", (event) => {
@@ -63,4 +73,3 @@ incomesForm.addEventListener("submit", (event) => {
 });
 
 updateBalanceUI();
-
