@@ -39,6 +39,28 @@
     </form>
     <ul id="expenses-list"></ul>
     <div id="total-expenses"></div>
+    <div id="edit-modal" class="edit-modal hidden">
+      <form class="edit-form" id="editForm">
+        <input
+          type="text"
+          name="editTitle"
+          minlength="3"
+          required
+          id="editTitle"
+        />
+        <input
+          type="number"
+          name="editAmount"
+          id="editAmount"
+          required
+          min="0.01"
+          step="0.01"
+        />
+        <button type="submit" id ="saveButton">Zapisz</button>
+        
+        <button type="reset" id="cancelButton">Anuluj</button>
+      </form>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

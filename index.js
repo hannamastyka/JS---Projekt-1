@@ -51,7 +51,27 @@ function renderIncomesList() {
       calculateTotalIncomes();
       updateBalanceUI();
       renderIncomesList();
-    }); 
+    });
+    editButton.addEventListener("click", () => {
+      const editModal = document.getElementById("edit-modal");
+      editModal.classList.remove("hidden");
+      const editTitle = document.getElementById("editTitle");
+      const editAmount = document.getElementById("editAmount");
+      editTitle.value = income.title;
+      editAmount.value = income.amount;
+      const editForm = document.getElementById("editForm");
+      const cancelButton = document.getElementById("cancelButton");
+      editForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        editModal.classList.add("hidden");
+        const itemToEdit = incomes.find((item) => item.id === income.id);
+        itemToEdit.title = editTitle.value;
+        itemToEdit.amount = editAmount.value;
+        calculateTotalIncomes();
+        updateBalanceUI();
+        renderIncomesList();
+      });
+    });
   });
 }
 
