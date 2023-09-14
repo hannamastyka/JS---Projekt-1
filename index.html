@@ -12,33 +12,49 @@
         <h1>Budżet Domowy</h1>
       </header>
       <p class="text" id="balance">Możesz jeszcze wydać *** złotych.</p>
+
+      <form id="incomes-form">
+        <input
+          type="text"
+          name="incomeTitle"
+          minlength="3"
+          required
+          placeholder="nazwa przychodu"
+        />
+        <input
+          type="number"
+          name="incomeAmount"
+          required
+          min="0.01"
+          step="0.01"
+          placeholder="kwota"
+        />
+        <button type="submit">Dodaj przychód</button>
+      </form>
+      <ul id="incomes-list"></ul>
+      <div id="total-incomes"></div>
+      <form id="expenses-form">
+        <input
+          type="text"
+          name="expenseTitle"
+          minlength="3"
+          required
+          placeholder="nazwa przychodu"
+        />
+
+        <input
+          type="number"
+          name="expenseAmount"
+          required
+          min="0.01"
+          step="0.01"
+          placeholder="kwota"
+        />
+        <button type="submit">Dodaj wydatek</button>
+      </form>
+      <ul id="expenses-list"></ul>
+      <div id="total-expenses"></div>
     </div>
-    <form id="incomes-form">
-      <input type="text" name="incomeTitle" minlength="3" required />
-      <input
-        type="number"
-        name="incomeAmount"
-        required
-        min="0.01"
-        step="0.01"
-      />
-      <button type="submit">Dodaj przychód</button>
-    </form>
-    <ul id="incomes-list"></ul>
-    <div id="total-incomes"></div>
-    <form id="expenses-form">
-      <input type="text" name="expensesTitle" minlength="3" required />
-      <input
-        type="number"
-        name="expenses-amount"
-        required
-        min="0.01"
-        step="0.01"
-      />
-      <button type="submit">Dodaj wydatek</button>
-    </form>
-    <ul id="expenses-list"></ul>
-    <div id="total-expenses"></div>
     <div id="edit-modal" class="edit-modal hidden">
       <form class="edit-form" id="editForm">
         <input
@@ -47,6 +63,7 @@
           minlength="3"
           required
           id="editTitle"
+          placeholder="nazwa przychodu"
         />
         <input
           type="number"
@@ -55,9 +72,10 @@
           required
           min="0.01"
           step="0.01"
+          placeholder="kwota"
         />
-        <button type="submit" id ="saveButton">Zapisz</button>
-        
+        <button type="submit" id="saveButton">Zapisz</button>
+
         <button type="reset" id="cancelButton">Anuluj</button>
       </form>
     </div>
