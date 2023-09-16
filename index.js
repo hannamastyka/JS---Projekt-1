@@ -10,12 +10,8 @@ const incomes = [];
 const expenses = [];
 
 function updateBalanceUI() {
-  const incomesSum = incomes
-    .map((income) => Number(income.amount))
-    .reduce((a, b) => a + b, 0);
-  const expensesSum = expenses
-    .map((expense) => Number(expense.amount))
-    .reduce((a, b) => a + b, 0);
+  const incomesSum = incomes.reduce((a, b) => a + Number(b?.amount), 0);
+  const expensesSum = expenses.reduce((a, b) => a + Number(b?.amount), 0);
   const balance = incomesSum - expensesSum;
 
   if (balance > 0) {
@@ -31,8 +27,7 @@ function updateBalanceUI() {
   }
 }
 function calculateTotalIncomes() {
-  const amounts = incomes.map((income) => Number(income.amount));
-  const sum = amounts.reduce((a, b) => a + b, 0);
+  const sum = incomes.reduce((a, b) => a + Number(b?.amount), 0);
   totalIncomes.textContent = `Suma przychodów: ${sum} zł`;
 }
 
@@ -107,8 +102,7 @@ incomesForm.addEventListener("submit", (event) => {
 updateBalanceUI();
 
 function calculateTotalExpenses() {
-  const amounts = expenses.map((expense) => Number(expense.amount));
-  const sum = amounts.reduce((a, b) => a + b, 0);
+  const sum = expenses.reduce((a, b) => a + Number(b?.amount), 0);
   totalExpenses.textContent = `Suma wydatków: ${sum} zł`;
 }
 
@@ -180,3 +174,4 @@ expensesForm.addEventListener("submit", (event) => {
   calculateTotalExpenses();
   updateBalanceUI();
 });
+
